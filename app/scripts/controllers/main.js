@@ -9,9 +9,29 @@
  */
 angular.module('quoteCrawlerFrontApp')
   .controller('MainCtrl', function ($scope, newsFactory) {
-  	$scope.news = newsFactory.get();
 
-  	console.log($scope.news);
+  	$scope.searchTerm = function() {
+  		var newsStuff = {};
+  		newsStuff = newsFactory.searchByTerm($scope.search);
+  		
+  		
+  		
+  	}
+
+  	$scope.$watch(function(){return newsFactory.getNewsData();}, function(newVal, oldVal) {
+		if (typeof newVal !== 'undefined') {
+        $scope.newsInfo = newVal.data;
+        console.log($scope.newsInfo);
+        
+        //console.log(movieArray);
+        
+
+       
+       
+       }})
+  	
+
+  	
 
     this.awesomeThings = [
       'HTML5 Boilerplate',

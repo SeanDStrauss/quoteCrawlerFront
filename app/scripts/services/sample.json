@@ -1,0 +1,13 @@
+
+var data =
+{
+	"id": 2,
+	"name": "test",
+	"author": "test",
+	"published": "test",
+	"url": "test",
+	"source": "test",
+	"title": "test",
+	"text": "test",
+	"crawled": "test"
+}

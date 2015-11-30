@@ -8,12 +8,31 @@
  * Factory in the quoteCrawlerFrontApp.
  */
 angular.module('quoteCrawlerFrontApp')
-  .factory('newsFactory', function ($resource) {
-    var data = $resource('http://localhost:8080/testing');
-   
+  .factory('newsFactory', function($http) {
+    var newsData = {};
+    function searchByTerm(term) {
+    $http({
+      method: 'GET',
+      url: 'http://localhost:8080/testing'
+    }).then(function successCallback(response) {
+      newsData = response;
+      console.log(term);
 
-    return data;
-  });
+     
+      
+    }, function errorCallback(response) {
+      
+    });
+  }
+
+    // Public API here
+    return {
+      getNewsData: function() {
+        return newsData;
+      },
+      searchByTerm: searchByTerm
+    };
+});
 
     
 

@@ -8,7 +8,11 @@
  * Controller of the quoteCrawlerFrontApp
  */
 angular.module('quoteCrawlerFrontApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function ($scope, newsFactory) {
+  	$scope.news = newsFactory.get();
+
+  	console.log($scope.news);
+
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

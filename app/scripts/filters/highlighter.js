@@ -11,7 +11,7 @@
 angular.module('quoteCrawlerFrontApp')
   .filter('highlighter', function ($sce) {
 
-    return function(textBody) {
+    return function(textBody, search) {
       var regex = /"([^"\\]|\\.)*"/gi;
      if(regex) {
        var pattern = regex;

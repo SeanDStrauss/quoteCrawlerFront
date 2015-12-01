@@ -14,7 +14,7 @@ angular.module('quoteCrawlerFrontApp')
     function searchByTerm(term) {
     $http({
       method: 'GET',
-      url: 'http://localhost:8080/article/getbyname'
+      url: 'http://localhost:8080/article/findbyterm?searchTerm=' + term  
     }).then(function successCallback(response) {
       newsData = response;
       //console.log(term);

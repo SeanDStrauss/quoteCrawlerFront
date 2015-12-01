@@ -121,4 +121,6 @@ div#text {}
 }
 .highlighter {
     background: yellow;
+    font-size: 16;
+    font-weight: bold;
 }

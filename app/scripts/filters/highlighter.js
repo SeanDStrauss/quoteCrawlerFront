@@ -9,13 +9,13 @@
  * Filter in the quoteCrawlerFrontApp.
  */
 angular.module('quoteCrawlerFrontApp')
-  .filter('highlighter', function () {
+  .filter('highlighter', function ($sce) {
 
     return function(textBody) {
       var regex = /"([^"\\]|\\.)*"/gi;
      if(regex) {
        var pattern = regex;
-       return textBody.replace(pattern, '<span class="highlighter">$&</span>');
+       return $sce.trustAsHtml(textBody.replace(pattern, '<span class="highlighter">$&</span>'));
        console.log("$&");
      }
      else {
@@ -23,3 +23,4 @@ angular.module('quoteCrawlerFrontApp')
      }
    };
   });
+//<div id="text" ng-model= "textBody">{{key.text | highlighter}}</div>

@@ -83,11 +83,11 @@ body {
 }
 
 #source {
-  
+
 }
 
 #crawled {
-  
+
 }
 
 #url {
@@ -95,20 +95,22 @@ body {
 }
 
 #name {
-
+  font-size: 25px
 }
 
 #title {
-
+  text-align: center;
 }
 
 #author {
-  
+
 }
 
 #text {
 
-}
+  color: black;}
+
+div#text {}
 
 #id {
 
@@ -116,4 +118,7 @@ body {
 
 #published {
 
+}
+.highlighter {
+    background: yellow;
 }

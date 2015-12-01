@@ -7,21 +7,22 @@
  * # newsFactory
  * Factory in the quoteCrawlerFrontApp.
  */
+//Search for newsdata and pass it to the MainController
 angular.module('quoteCrawlerFrontApp')
   .factory('newsFactory', function($http) {
     var newsData = {};
     function searchByTerm(term) {
     $http({
       method: 'GET',
-      url: 'http://localhost:8080/testing'
+      url: 'http://localhost:8080/article/getbyname'
     }).then(function successCallback(response) {
       newsData = response;
-      console.log(term);
+      //console.log(term);
 
-     
-      
+
+
     }, function errorCallback(response) {
-      
+
     });
   }
 
@@ -33,6 +34,3 @@ angular.module('quoteCrawlerFrontApp')
       searchByTerm: searchByTerm
     };
 });
-
-    
-

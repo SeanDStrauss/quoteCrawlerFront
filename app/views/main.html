@@ -1,5 +1,12 @@
+<div class="jumbotron">
+  <h1 class="display-3">Quote Crawler</h1>
+  <p class="lead">Skip all of the news ish and get right down to who actually said what!!</p>
+  <hr class="m-y-md">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+<span ng-bind-html="highlight(textToSearchThrough, searchText)"></span>
+</div>
 <div class="row">
-  <div class="col-lg-6">
+  <div class="col-lg-12">
     <div class="input-group">
       <span class="input-group-btn">
         <button class="btn btn-secondary" type="button" ng-click="searchTerm()" >Search!</button>
@@ -7,11 +14,7 @@
       <input type="text" class="form-control" placeholder="Search for..." ng-model="search">
     </div>
   </div>
-  
-  </div>
+
 </div>
-
-
+</div>
 <quotes></quotes>
-
-

@@ -1,14 +1,23 @@
-<div>
-	<h1>{{search}}</h1>
-</div>
-<div class="articleinfo">
-	<div id="id">{{newsInfo.id}}</div>
-	<div id="name">{{newsInfo.name}}</div>
-	<div id="author">{{newsInfo.author}}</div>
-	<div id="published">{{newsInfo.published}}</div>
-	<div id="url">{{newsInfo.url}}</div>
-	<div id="source">{{newsInfo.source}}</div>
-	<div id="title">{{newsInfo.title}}</div>
-	<div id="text">{{newsInfo.text}}</div>
-	<div id="crawled">{{newsInfo.crawled}}</div>
+
+<div class="articleinfo" ng-repeat="key in newsInfo">
+	<h1>
+		<div id="title">{{key.title}}</div>
+	</h1>
+	<div id="id">{{key.id}}</div>
+	<div id="name">{{key.name}}</div>
+	<div id="author">{{key.author}}</div>
+	<div id="published">{{key.published}}</div>
+
+	<div id="url">
+		<a href="{{key.url}}">{{key.source}}</a>
+	</div>
+
+	<div id="source">{{key.source}}</div>
+
+
+
+
+	
+	<span ng-bind-html="key.text | highlighter"></span>
+	<div id="crawled">{{key.crawled}}</div>
 </div>

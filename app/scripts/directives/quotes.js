@@ -11,10 +11,11 @@ angular.module('quoteCrawlerFrontApp')
     return {
       templateUrl: "scripts/directives/quotes.html",
       restrict: 'E',
-      
+
       link: function postLink(scope, element, attrs) {
-      		
-        
+      
+
       }
     };
   });
+console.log("testings");

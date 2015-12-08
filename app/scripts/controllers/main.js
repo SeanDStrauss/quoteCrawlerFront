@@ -8,7 +8,7 @@
  * Controller of the quoteCrawlerFrontApp
  */
 angular.module('quoteCrawlerFrontApp')
-  .controller('MainCtrl', function ($scope, newsFactory) {
+  .controller('MainCtrl', function ($scope, newsFactory, Restangular) {
 
   	$scope.searchTerm = function() {
   		var newsStuff = {};
@@ -23,6 +23,11 @@ angular.module('quoteCrawlerFrontApp')
         $scope.newsInfo = newVal.data;
 
       }});
+      Restangular.setBaseUrl("http://localhost:8080/")
+      var restTest = Restangular.all("article");
+      console.log(restTest.getList());
+
+
 
 
 

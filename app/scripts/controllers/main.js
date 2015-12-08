@@ -22,14 +22,6 @@ angular.module('quoteCrawlerFrontApp')
 		if (typeof newVal !== 'undefined') {
         $scope.newsInfo = newVal.data;
 
-
-        console.log($scope.newsInfo);
-
-        //console.log(movieArray);
-
-
-
-
       }});
 
 

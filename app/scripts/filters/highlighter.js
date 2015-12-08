@@ -12,11 +12,13 @@ angular.module('quoteCrawlerFrontApp')
   .filter('highlighter', function ($sce) {
 
     return function(textBody, search) {
-      var regex = /"([^"\\]|\\.)*"/gi;
+        // /"([^"\\]|\\.)*"/gi;
+
+      var regex = /"(.+?)"/gi;
      if(regex) {
        var pattern = regex;
        return $sce.trustAsHtml(textBody.replace(pattern, '<span class="highlighter">$&</span>'));
-       console.log("$&");
+
      }
      else {
        return textBody;

@@ -17,7 +17,7 @@ angular.module('quoteCrawlerFrontApp')
       url: 'http://localhost:8080/article/findbyterm?searchTerm=' + term
     }).then(function successCallback(response) {
       newsData = response;
-      
+
     }, function errorCallback(response) {
 
     });

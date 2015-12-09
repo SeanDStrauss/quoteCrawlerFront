@@ -23,9 +23,17 @@ angular.module('quoteCrawlerFrontApp')
         $scope.newsInfo = newVal.data;
 
       }});
-      Restangular.setBaseUrl("http://localhost:8080/")
-      var restTest = Restangular.all("article");
-      console.log(restTest.getList());
+
+      Restangular.setBaseUrl("http://localhost:8080/article/");
+      var restTest = Restangular.all("findbyterm")
+      var stuff =  restTest.getList( {"searchTerm": "donald"}).then(function(article){
+          $scope.article = article;
+      });
+
+
+
+
+
 
 
 

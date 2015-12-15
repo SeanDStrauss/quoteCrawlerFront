@@ -12,10 +12,17 @@ angular.module('quoteCrawlerFrontApp')
       templateUrl: "scripts/directives/quotes.html",
       restrict: 'E',
 
-      link: function postLink(scope, element, attrs) {
-      
-
-      }
     };
-  });
-console.log("testings");
+})
+.directive('searchDirective', function() {
+    return {
+        restrict: 'AE',
+        templateUrl: "scripts/directives/searchDirectives.html"
+    };
+})
+.directive('register', function() {
+    return{
+        restrict: 'E',
+        templateUrl: 'app/views/partials/register.html'
+    };
+})
